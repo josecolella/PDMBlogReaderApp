@@ -22,6 +22,11 @@
 		363262C318CE53DB00929E3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363262A218CE53DB00929E3C /* UIKit.framework */; };
 		363262CB18CE53DB00929E3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 363262C918CE53DB00929E3C /* InfoPlist.strings */; };
 		363262CD18CE53DB00929E3C /* PropertyExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 363262CC18CE53DB00929E3C /* PropertyExampleTests.m */; };
+		363262D718CE549F00929E3C /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 363262D618CE549F00929E3C /* Data.plist */; };
+		36AD182718CE71D0000E3918 /* BlogReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD182618CE71D0000E3918 /* BlogReader.m */; };
+		36AD182C18CE7204000E3918 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD182918CE7204000E3918 /* HTMLNode.m */; };
+		36AD182D18CE7204000E3918 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD182B18CE7204000E3918 /* HTMLParser.m */; };
+		36AD182F18CE7317000E3918 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AD182E18CE7317000E3918 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,14 @@
 		363262C818CE53DB00929E3C /* PropertyExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PropertyExampleTests-Info.plist"; sourceTree = "<group>"; };
 		363262CA18CE53DB00929E3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		363262CC18CE53DB00929E3C /* PropertyExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyExampleTests.m; sourceTree = "<group>"; };
+		363262D618CE549F00929E3C /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data.plist; path = PropertyExample/Data.plist; sourceTree = "<group>"; };
+		36AD182518CE71D0000E3918 /* BlogReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogReader.h; sourceTree = "<group>"; };
+		36AD182618CE71D0000E3918 /* BlogReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogReader.m; sourceTree = "<group>"; };
+		36AD182818CE7204000E3918 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		36AD182918CE7204000E3918 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		36AD182A18CE7204000E3918 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		36AD182B18CE7204000E3918 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		36AD182E18CE7317000E3918 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36AD182F18CE7317000E3918 /* libxml2.dylib in Frameworks */,
 				363262A118CE53DB00929E3C /* CoreGraphics.framework in Frameworks */,
 				363262A318CE53DB00929E3C /* UIKit.framework in Frameworks */,
 				3632629F18CE53DB00929E3C /* Foundation.framework in Frameworks */,
@@ -85,6 +99,7 @@
 		3632629218CE53DB00929E3C = {
 			isa = PBXGroup;
 			children = (
+				363262D618CE549F00929E3C /* Data.plist */,
 				363262A418CE53DB00929E3C /* PropertyExample */,
 				363262C618CE53DB00929E3C /* PropertyExampleTests */,
 				3632629D18CE53DB00929E3C /* Frameworks */,
@@ -104,6 +119,7 @@
 		3632629D18CE53DB00929E3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36AD182E18CE7317000E3918 /* libxml2.dylib */,
 				3632629E18CE53DB00929E3C /* Foundation.framework */,
 				363262A018CE53DB00929E3C /* CoreGraphics.framework */,
 				363262A218CE53DB00929E3C /* UIKit.framework */,
@@ -115,8 +131,11 @@
 		363262A418CE53DB00929E3C /* PropertyExample */ = {
 			isa = PBXGroup;
 			children = (
+				36AD183018CE733D000E3918 /* HTMLParser */,
 				363262AD18CE53DB00929E3C /* AppDelegate.h */,
 				363262AE18CE53DB00929E3C /* AppDelegate.m */,
+				36AD182518CE71D0000E3918 /* BlogReader.h */,
+				36AD182618CE71D0000E3918 /* BlogReader.m */,
 				363262B018CE53DB00929E3C /* Main.storyboard */,
 				363262B318CE53DB00929E3C /* MasterViewController.h */,
 				363262B418CE53DB00929E3C /* MasterViewController.m */,
@@ -155,6 +174,17 @@
 				363262C918CE53DB00929E3C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36AD183018CE733D000E3918 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				36AD182818CE7204000E3918 /* HTMLNode.h */,
+				36AD182918CE7204000E3918 /* HTMLNode.m */,
+				36AD182A18CE7204000E3918 /* HTMLParser.h */,
+				36AD182B18CE7204000E3918 /* HTMLParser.m */,
+			);
+			name = HTMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +231,7 @@
 		3632629318CE53DB00929E3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jose Colella";
 				TargetAttributes = {
 					363262BE18CE53DB00929E3C = {
@@ -235,6 +265,7 @@
 			files = (
 				363262BA18CE53DB00929E3C /* Images.xcassets in Resources */,
 				363262A918CE53DB00929E3C /* InfoPlist.strings in Resources */,
+				363262D718CE549F00929E3C /* Data.plist in Resources */,
 				363262B218CE53DB00929E3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,9 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36AD182718CE71D0000E3918 /* BlogReader.m in Sources */,
 				363262AF18CE53DB00929E3C /* AppDelegate.m in Sources */,
+				36AD182C18CE7204000E3918 /* HTMLNode.m in Sources */,
 				363262B518CE53DB00929E3C /* MasterViewController.m in Sources */,
 				363262AB18CE53DB00929E3C /* main.m in Sources */,
+				36AD182D18CE7204000E3918 /* HTMLParser.m in Sources */,
 				363262B818CE53DB00929E3C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +345,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -350,7 +383,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -386,6 +418,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PropertyExample/PropertyExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "PropertyExample/PropertyExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -399,6 +436,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PropertyExample/PropertyExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "PropertyExample/PropertyExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -408,7 +450,6 @@
 		363262D418CE53DB00929E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PropertyExample.app/PropertyExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -431,7 +472,6 @@
 		363262D518CE53DB00929E3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PropertyExample.app/PropertyExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -466,6 +506,7 @@
 				363262D218CE53DB00929E3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		363262D318CE53DB00929E3C /* Build configuration list for PBXNativeTarget "PropertyExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +515,7 @@
 				363262D518CE53DB00929E3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
