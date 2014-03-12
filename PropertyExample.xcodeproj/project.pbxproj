@@ -22,6 +22,7 @@
 		363262C318CE53DB00929E3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363262A218CE53DB00929E3C /* UIKit.framework */; };
 		363262CB18CE53DB00929E3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 363262C918CE53DB00929E3C /* InfoPlist.strings */; };
 		363262CD18CE53DB00929E3C /* PropertyExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 363262CC18CE53DB00929E3C /* PropertyExampleTests.m */; };
+		368A621118D0C6150029F18D /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368A621018D0C6150029F18D /* Data.plist */; };
 		36AD182718CE71D0000E3918 /* BlogReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD182618CE71D0000E3918 /* BlogReader.m */; };
 		36AD182C18CE7204000E3918 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD182918CE7204000E3918 /* HTMLNode.m */; };
 		36AD182D18CE7204000E3918 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD182B18CE7204000E3918 /* HTMLParser.m */; };
@@ -60,6 +61,7 @@
 		363262C818CE53DB00929E3C /* PropertyExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PropertyExampleTests-Info.plist"; sourceTree = "<group>"; };
 		363262CA18CE53DB00929E3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		363262CC18CE53DB00929E3C /* PropertyExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyExampleTests.m; sourceTree = "<group>"; };
+		368A621018D0C6150029F18D /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		36AD182518CE71D0000E3918 /* BlogReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogReader.h; sourceTree = "<group>"; };
 		36AD182618CE71D0000E3918 /* BlogReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogReader.m; sourceTree = "<group>"; };
 		36AD182818CE7204000E3918 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		363262A418CE53DB00929E3C /* PropertyExample */ = {
 			isa = PBXGroup;
 			children = (
+				368A620F18D0C40F0029F18D /* Caches */,
 				36AD183018CE733D000E3918 /* HTMLParser */,
 				363262AD18CE53DB00929E3C /* AppDelegate.h */,
 				363262AE18CE53DB00929E3C /* AppDelegate.m */,
@@ -139,6 +142,7 @@
 				363262B618CE53DB00929E3C /* DetailViewController.h */,
 				363262B718CE53DB00929E3C /* DetailViewController.m */,
 				363262B918CE53DB00929E3C /* Images.xcassets */,
+				368A621018D0C6150029F18D /* Data.plist */,
 				363262A518CE53DB00929E3C /* Supporting Files */,
 			);
 			path = PropertyExample;
@@ -171,6 +175,14 @@
 				363262C918CE53DB00929E3C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		368A620F18D0C40F0029F18D /* Caches */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Caches;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		36AD183018CE733D000E3918 /* HTMLParser */ = {
@@ -262,6 +274,7 @@
 			files = (
 				363262BA18CE53DB00929E3C /* Images.xcassets in Resources */,
 				363262A918CE53DB00929E3C /* InfoPlist.strings in Resources */,
+				368A621118D0C6150029F18D /* Data.plist in Resources */,
 				363262B218CE53DB00929E3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

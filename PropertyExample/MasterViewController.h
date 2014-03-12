@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BlogReader;
 
 @interface MasterViewController : UITableViewController
-
+@property (nonatomic, strong) BlogReader * blogReader;
 @end
